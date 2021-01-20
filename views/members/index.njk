@@ -1,0 +1,36 @@
+{% extends "layout.njk" %}
+
+
+{% block head %}
+    <title>Gym Manager</title> 
+    <link rel="stylesheet" type="text/css" href="/members.css" >
+{% endblock %}
+
+
+{% block content %}
+  <div class="card table-container">
+    <table class="list-members">
+    <a type="link" href="/members/create">Novo Membro</a>
+      <thead>
+        <tr>
+          <th>Membros</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for member in members %}
+        <tr>
+          <td>
+            <span
+              style="background-image:url({{member.avatarUrl}})">
+            </span>
+          {{member.name}}</td>
+          <td>
+            <a href="/members/{{member.id}}">ver</a>
+          </td>
+        </tr>
+        {% endfor %} 
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}

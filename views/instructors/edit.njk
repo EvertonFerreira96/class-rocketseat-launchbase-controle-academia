@@ -1,0 +1,31 @@
+{% extends "layout.njk" %}
+
+
+{% block head %}
+    <title>Gym Manager</title> 
+    <link rel="stylesheet" type="text/css" href="/instructors.css" >
+{% endblock %}
+
+
+{% block content %}
+<div class="card">
+  
+    <section class="avatar" style="background: url({{instructor.avatarUrl}}) no-repeat center center / cover;">
+    </section>
+ 
+    <section class="details"> 
+    <h3>Editar instrutor</h3>
+
+    <form class='delete-instructor' action="/instructors?_method=DELETE" method="POST" > 
+      <button type="submit">Deletar</button>
+      <input type="hidden" name="id" value={{instructor.id}}>
+    </form>
+    <form  class='create-instructor' action="/instructors?_method=PUT" method="POST" > 
+        {% include 'instructors/fields.njk' %}
+        <input type="hidden" name="id" value={{instructor.id}}>
+    </form>
+    </section>
+
+
+</div>
+{% endblock content %}

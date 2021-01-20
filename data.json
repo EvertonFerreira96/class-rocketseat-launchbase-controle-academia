@@ -1,0 +1,45 @@
+{
+  "members": [
+    {
+      "id": 2,
+      "avatarUrl": "https://source.unsplash.com/collection/190727/1600x900",
+      "name": "Everton da Costa Ferreira",
+      "email": "evertonferreira96@gmail.com",
+      "birth": 10800000,
+      "gender": "M",
+      "blood": "AB+",
+      "weight": "111",
+      "height": "11",
+      "createdAt": 1611022120334
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "avatarUrl": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGd5bXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Everton da Costa Ferreira",
+      "birth": 826848000000,
+      "gender": "M",
+      "services": "react native, react, javascript",
+      "createdAt": 1610677510922
+    },
+    {
+      "id": 3,
+      "avatarUrl": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGd5bXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Leticia da Silva Motta",
+      "birth": 826848000000,
+      "gender": "F",
+      "services": "HTML, CSS, JS",
+      "createdAt": 1610732396746
+    },
+    {
+      "id": 4,
+      "avatarUrl": "https://source.unsplash.com/collection/190727/1600x900",
+      "name": "Leticia da Silva Motta",
+      "birth": 858902400000,
+      "gender": "M",
+      "services": "HTML, CSS, JS",
+      "createdAt": 1610734191391
+    }
+  ]
+}

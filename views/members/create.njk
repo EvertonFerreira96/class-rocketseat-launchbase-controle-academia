@@ -1,0 +1,22 @@
+{% extends "layout.njk" %}
+
+
+{% block head %}
+    <title>Gym Manager</title> 
+    <link rel="stylesheet" type="text/css" href="/members.css" >
+{% endblock %}
+
+
+{% block content %}
+  <form class="card create-resource" action="/members" method="POST" > 
+    <section class="avatar">
+    </section>
+    <section class="details"> 
+      
+      <h3>Novo Membro</h3>
+
+      {% include 'members/fields.njk' %}
+
+    </section>
+  </form>
+{% endblock content %}

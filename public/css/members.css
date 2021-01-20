@@ -1,0 +1,251 @@
+@import './variables.css';
+
+/* === CARD === */
+
+.card {
+  background-color: #FFFFFF;
+  width: 800px;
+  min-height: 400px;
+  margin: 45px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.5);
+  
+  opacity: 0;
+
+  animation-name: up;
+  animation-duration: 700ms;
+  animation-timing-function: ease;
+  animation-delay: 100ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(15px);
+  }
+  100% {
+   opacity: 1;
+  }
+}
+
+.details {
+  padding: 32px;
+  position: relative;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* align-content: center; */
+  display: flex;
+  flex-direction: column;
+}
+
+.details .item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.details .item:last-child{
+  border: none;
+}
+
+.details h3,
+.details .item div:first-child{
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  line-height: 24px;
+  color: #777;
+}
+
+.details h3 {
+  text-transform: uppercase;
+  font-family: bold;
+  color: var(--primary-color);
+}
+
+.details .item div+div{
+  color: #555;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.details .item .list span{
+  padding: 8px 16px;
+  border-radius: 16px;
+
+  color: #777;
+  text-transform: uppercase;
+  font-size: 12px;
+
+  margin: 8px 0 0 4px;
+  display: inline-block;
+
+  background-color: var(--secundary-color);
+}
+
+.card.create-resource{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/*
+
+
+button:focus ~ .item input[type="date"]:invalid ~ .validity::after{
+  content: "✘";
+  font-size: 16px; 
+  position: absolute;
+
+}
+
+button:focus ~ .item input[type="date"]:valid ~ .validity::after{
+  content: "✔︎";
+  font-size: 16px;
+}
+
+*/
+
+form input {
+  width: 100%;
+  outline: none;
+  color: #555;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+form input[type="radio"] {
+  width: initial;
+  margin: 0 4px 0 0;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button[type="submit"],
+a.button {
+  padding: 8px 32px;
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  border-radius: 4px;
+  margin-top: 32px;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+a.button{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.create-resource button[type="submit"] {
+  margin-top: 8px;
+} 
+
+
+
+.delete-resource button[type="submit"] {
+ background-color: lightcoral;
+} 
+
+
+.table-container {
+  display: block;
+  padding: 40px;
+  box-sizing: border-box;
+
+}
+
+.table-container table {
+  width: 100%;
+  border-spacing: 0;
+
+}
+
+.table-container table thead tr th {
+  text-align: left;
+}
+
+
+
+.table-container table tbody tr td:first-child {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 64px 1fr;
+}
+
+.table-container table tbody tr td:first-child span{
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 3px 1px 6px -4px black;
+  border: 2px solid white
+
+}
+
+
+
+.table-container table tbody tr td:last-child a{
+  background-color: var(--primary-color);
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 12px;
+  border-radius: 4px;
+
+}
+
+
+td, th {
+  padding: 16px;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+th {
+  text-transform: uppercase;
+  color: #777;
+  font-size: 14px;
+}
+
+ .table-container table thead tr th:last-child 
+,.table-container table tbody tr td:last-child { 
+  text-align: center;
+}
+
+.table-container table tbody tr td span {
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  color: #777;
+  background-color: var(--secundary-color);
+}
+
+
+.table-container a[type="link"]{
+  background-color: var(--primary-color);
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 12px;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 0 16px 8px;
+
+}
+
+
+.inactive{
+  display: none;
+}
