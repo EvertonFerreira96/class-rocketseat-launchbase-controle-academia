@@ -67,7 +67,7 @@ module.exports = {
             , services
             , createdAt
          })
-      fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
+      fs.writeFile('../data.json', JSON.stringify(data, null, 2), (err) => {
          return err ? res.send('Write file Error') : res.redirect(`instructors/${id}`);
       });
    },

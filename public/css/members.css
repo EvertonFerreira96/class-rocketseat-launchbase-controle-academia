@@ -107,7 +107,7 @@ button:focus ~ .item input[type="date"]:valid ~ .validity::after{
 
 */
 
-form input {
+form input, select {
   width: 100%;
   outline: none;
   color: #555;
